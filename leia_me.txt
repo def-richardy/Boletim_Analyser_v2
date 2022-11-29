@@ -1,0 +1,15 @@
+Boletim Analyser
+
+O programa foi desenvolvido com o objetivo de ajudar professores a calcular a média de diversos alunos de forma rápida. Informando apenas as notas de teste, trabalho, projeto, prova e comportamento.
+
+A média então é somada juntando todas as notas e dividindo por 2. Ao final do programa os professores podem ver a média do aluno, caso queiram consultar-las depois do programa se encerrar:
+acesse: "__log__/data.txt". Na pasta "__log__" no arquivo "data.txt", se encontra o registro de cada aluno contendo todas as suas notas e sua média. Caso seja a primeira vez executando o programa, não haverá o arquivo "data.txt" em "__log__", o programa irá criar automaticamente o arquivo "data.txt" em sua primeira execução.
+
+Caso queira apagar os dados e ter outro registro sem conter nenhuma informação dentro, apague o arquivo "data.txt" na pasta "__log__".
+
+Observações:
+
+1 - Não coloque "," (vírgula) nas notas, ao invés disso, use "." (ponto).
+2 - Não use letras nas notas. Os valores das notas aceitam somente números inteiros (1, 2, 3, etc..) e números reais (1.2, 2.5, 5.5, etc...).
+
+Criado por: Richard Garcia (Instagram: @def_richardy).

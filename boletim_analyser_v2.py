@@ -1,16 +1,27 @@
 import fuctions
 import os
+from rich.progress import track 
+from rich.table import Table
+from rich.console import Console
 from termcolor import colored
 from datetime import date
 
 alunos = list()
 data = '__log__/data.txt'
 user_option = 0
+
 data_atual = date.today()
 data_string = f'{data_atual.day}/{data_atual.month}/{data_atual.year}'
+
 bimestres = [1, 2, 3, 4]
 turma = int(input('Digite a turma: '))
 bimestre = int(input('Qual é o bimestre?: '))
+
+table = Table(title = 'Boletim') 
+table.add_column('Nome')
+table.add_column('N°')
+table.add_column('Média')
+console = Console()
 
 while bimestre not in bimestres:
 	print(colored('Digite um bimestre válido!\n', 'red'))
@@ -28,6 +39,7 @@ while True:
 (Escolha entre "1" ou "2").
 
 Escolha: """))
+		os.system('clear' or 'cls')
 		if user_option == 2:
 			with open(data, 'a') as save:
 				for aluno in alunos:
@@ -64,7 +76,8 @@ os.system("clear" or "cls")
 
 fuctions.banner('BOLETIM / NOTAS')
 for aluno in alunos:
-	print(f'Nome: {aluno.nome} ..... N° {aluno.numero} ..... Média: {aluno.media:.1f}')
+	table.add_row(f'{aluno.nome}', f'{str(aluno.numero)}', f'{str(aluno.media)}')
+console.print(table)
 
 print('\nVocê pode acessar os registros e informações de cada aluno no arquivo "data.txt" na pasta "__log__"\n')
 input('\nPressione [ enter ] para sair: ')
